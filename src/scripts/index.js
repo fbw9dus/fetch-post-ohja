@@ -91,5 +91,36 @@ form.addEventListener("submit", async e => {
 // .then(function(res){ return res.json(); })
 // .then(function(data){ alert( JSON.stringify( data ) ) })
 
+/* // The following line makes sure your styles are included in the project. Don't remove this.
+import '../styles/main.scss';
+import "babel-polyfill";
 
+
+// \/ All of your javascript should go here \/
+
+const form = document.getElementById("submit-form")
+const formInputs = document.querySelectorAll("input")
+
+// send
+async function submitData() {
+    const inputs = []
+    formInputs.forEach(input => {
+        inputs.push(`${input.id}: ${input.value}`)
+    })
+    const jsonData = JSON.stringify(inputs)
+    const settings = {
+        method: "POST",
+        body: jsonData
+    }
+    const fetchResponse = await fetch("https://jsonplaceholder.typicode.com/posts", settings)
+    const data = await fetchResponse.json()
+    console.log(jsonData)
+    return data
+}
+
+form.addEventListener("submit", async event => {
+    event.preventDefault()
+    const data = await submitData()
+    alert(`Thank you for submitting your details. User ID: ${data.id}`)
+}) */
 
